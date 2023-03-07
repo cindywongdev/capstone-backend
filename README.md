@@ -22,12 +22,13 @@ erDiagram
     LISTING {
         bigint  id
         string  food_name
+        date    listing_date
         string  img
         string  ingredients
         string  allergens
         int     good_for_x_days
         int     num_servings
-        date    pickup_by_time
+        datetime    pickup_by_time
         bool    is_expired
         bool    is_out_of_food
     }
