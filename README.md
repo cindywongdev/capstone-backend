@@ -21,15 +21,15 @@ erDiagram
     }
     LISTING {
         bigint  id
-        string  foodName
+        string  food_name
         string  img
         string  ingredients
         string  allergens
-        int     goodForXdays
-        int     numServings
-        date    pickupByTime
-        bool    isExpired
-        bool    isOutOfFood
+        int     good_for_x_days
+        int     num_servings
+        date    pickup_by_time
+        bool    is_expired
+        bool    is_out_of_food
     }
 ```
 
