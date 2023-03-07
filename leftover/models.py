@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 class Listing(models.Model):
@@ -10,13 +11,19 @@ class Listing(models.Model):
     
     # image url of the food
     # stretch goal: create option to upload image file(s) directly (use ImageField())
-    img = models.URLField()
+    img = models.URLField(max_length=300)
     
-    # ingredients in food
-    ingredients = models.CharField(max_length=300)
+    # array of ingredients in food
+    # not required
+    ingredients = ArrayField(
+        models.CharField(max_length=25, blank=True)
+    )
     
-    # potential common allergens
-    allergens = models.CharField(max_length=300)
+    # array of potential common allergens
+    # not required
+    allergens = ArrayField(
+        models.CharField(max_length=25, blank=True)
+    )
     
     # how many days the food is good for
     # will decrement over time
