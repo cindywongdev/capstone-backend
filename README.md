@@ -13,6 +13,7 @@ This is the API/backend for [Leftover](https://github.com/cinduhrz/capstone-fron
 ```mermaid
 erDiagram
     RESTAURANT ||--o{ LISTING: has
+    LISTING ||--o{ REQUEST: has
     RESTAURANT {
         bigint id
         string name
@@ -31,6 +32,15 @@ erDiagram
         datetime    pickup_by_time
         bool    is_expired
         bool    is_out_of_food
+        string  restaurant
+    }
+    REQUEST {
+        bigint  id
+        string  username
+        bool    is_org
+        int     num_servings
+        string  status
+        bigint  listing_id
     }
 ```
 

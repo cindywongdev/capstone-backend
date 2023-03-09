@@ -42,3 +42,25 @@ class Listing(models.Model):
     
     # whether number of servings is > 0
     is_out_of_food = models.BooleanField(default=False)
+    
+    # name of restaurant (creator of listing)
+    restaurant = models.CharField(max_length=30, default="Cindy's Restaurant")
+    
+    
+class Request(models.Model):
+    # name of user who made the request
+    username = models.CharField(max_length=30)
+    
+    # whether user is an organization or an individual
+    is_org = models.BooleanField()
+    
+    # number of servings being requested
+    # must be equal to or lower than available servings
+    num_servings = models.PositiveIntegerField()
+    
+    # status of request
+    # is 1 of 3: pending, accepted, denied
+    status = models.CharField(max_length=10, default="pending")
+    
+    # the specific listing that request is for
+    listing_id = models.ForeignKey(Listing, on_delete=models.CASCADE)
