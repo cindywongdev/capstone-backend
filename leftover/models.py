@@ -44,7 +44,7 @@ class Listing(models.Model):
     is_out_of_food = models.BooleanField(default=False)
     
     # name of restaurant (creator of listing)
-    restaurant = models.CharField(max_length=30, default="Cindy's Restaurant")
+    restaurant = models.CharField(max_length=30)
     
     
 class Request(models.Model):
