@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from leftover.views import ListingViewSet
+from leftover.views import ListingViewSet, RequestViewSet
 
 # create new router
 router = routers.DefaultRouter()
 # register our viewset(s)
 router.register(r'listings', ListingViewSet) #register /listings routers
+router.register(r'requests', RequestViewSet)
 
 urlpatterns = [
     # add all of our router urls
