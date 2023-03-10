@@ -1,7 +1,7 @@
 from .models import Listing
 from rest_framework import viewsets
 from rest_framework import permissions
-from .serializers import ListingSerializer
+from .serializers import ListingSerializer, RequestSerializer
 
 
 # Create your views here.
@@ -13,3 +13,6 @@ class ListingViewSet(viewsets.ModelViewSet):
     # option permission class to set permission level
     # Could be [permissions.IsAuthenticated]
     permission_classes = [permissions.AllowAny]
+
+## how do I make views for the 'many' model of a one to many relationship?
+#class RequestViewSet(viewsets.ModelViewSet):

@@ -36,7 +36,7 @@ erDiagram
     }
     REQUEST {
         bigint  id
-        string  username
+        string  requester
         bool    is_org
         int     num_servings
         string  status

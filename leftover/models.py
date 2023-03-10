@@ -48,8 +48,8 @@ class Listing(models.Model):
     
     
 class Request(models.Model):
-    # name of user who made the request
-    username = models.CharField(max_length=30)
+    # first name of user who made the request, or the org name
+    requester = models.CharField(max_length=30)
     
     # whether user is an organization or an individual
     is_org = models.BooleanField()
