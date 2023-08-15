@@ -6,7 +6,6 @@ This is the API/backend for [Leftover](https://github.com/cinduhrz/capstone-fron
 - Python
 - Django
 - PostgreSQL
-- Food API (Edamam or Spoonacular probably)
 - Jira
 
 ### Models
