@@ -1,4 +1,4 @@
-# Quotidian Backend
+# Leftover Backend
 This is the API/backend for [Leftover](https://github.com/cinduhrz/capstone-frontend), a full CRUD app for designed to connect restaurants with surplus food to those in need. Built on a Django backend (with a PostgreSQL database) and Vue frontend, Leftover makes it easy for restaurants to list available food, while nearby groups can arrange for pickup. Users can search for local donations, making it simple to find nutritious meals that might otherwise go to waste. By reducing food waste and providing meals to those in need, Leftover is on the frontlines of fighting hunger and supporting communities. Join us today and help make a difference in the lives of people struggling with food insecurity.
 
 #### Technologies Used
